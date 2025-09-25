@@ -1,0 +1,12 @@
+{
+    "loginTitle": "Inicia sesión en tu cuenta",
+    "loginDescription": "Ingresa tu correo electrónico para iniciar sesión",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "m@ejemplo.com",
+    "passwordLabel": "Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "loginButton": "Iniciar sesión",
+    "loginWithGoogle": "Iniciar sesión con Google",
+    "signupText": "¿No tienes una cuenta?",
+    "signupLink": "Regístrate"
+}

@@ -1,0 +1,12 @@
+{
+    "loginTitle": "Login to your account",
+    "loginDescription": "Enter your email below to login to your account",
+    "emailLabel": "Email",
+    "emailPlaceholder": "m@example.com",
+    "passwordLabel": "Password",
+    "forgotPassword": "Forgot your password?",
+    "loginButton": "Login",
+    "loginWithGoogle": "Login with Google",
+    "signupText": "Don't have an account?",
+    "signupLink": "Sign up"
+}
