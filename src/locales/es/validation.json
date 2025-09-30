@@ -1,0 +1,8 @@
+{
+    "_comment": "Mensajes de validación para Zod",
+    "emailRequired": "El correo electrónico es obligatorio",
+    "emailInvalid": "El correo electrónico no es válido",
+    "passwordRequired": "La contraseña es obligatoria",
+    "passwordMin": "La contraseña debe tener al menos 6 caracteres",
+    "rememberMe": "El campo 'Recuérdame' debe ser verdadero o falso"
+}

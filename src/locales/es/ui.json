@@ -1,0 +1,18 @@
+{
+    "_comment": "Mensajes generales de la interfaz",
+    "metadata": {
+        "title": "Next.js Auth RBAC",
+        "description": "A Next.js application that implements authentication and role-based access control (RBAC), allowing secure management of users and permissions according to different roles."
+    },
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "loading": "Cargando...",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "notFound": {
+        "title": "¡Ups! Página no encontrada",
+        "description": "Lo sentimos, esta página no ha sido eliminada o no existe.",
+        "back": "Volver atrás",
+        "home": "Ir al inicio"
+    }
+}

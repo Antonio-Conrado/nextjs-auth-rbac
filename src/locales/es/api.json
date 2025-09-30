@@ -1,0 +1,5 @@
+{
+    "_comment": "Mensajes de la API",
+    "serverError": "Error interno del servidor, por favor intenta más tarde",
+    "apiResponseSchemaError": "ApiResponseSchema compatibility error. Check the backend response."
+}
