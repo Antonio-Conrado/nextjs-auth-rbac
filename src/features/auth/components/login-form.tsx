@@ -20,12 +20,13 @@ import ErrorMessage from "@/shared/components/feedback/ErrorMessage";
 import { toast } from "sonner";
 import { Checkbox } from "@/shared/components/ui/checkbox";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  const t = useTranslations("auth");
+  const t = useTranslations();
   const [checked, setChecked] = useState(false);
 
   const [state, formAction] = useActionState(
@@ -46,20 +47,20 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle>{t("loginTitle")}</CardTitle>
-          <CardDescription>{t("loginDescription")}</CardDescription>
+          <CardTitle>{t("auth.login.title")}</CardTitle>
+          <CardDescription>{t("auth.login.description")}</CardDescription>
         </CardHeader>
         <CardContent>
           <form action={formAction} noValidate>
             <div className="flex flex-col gap-6">
               {/* email */}
               <div className="grid gap-3">
-                <Label htmlFor="email">{t("emailLabel")}</Label>
+                <Label htmlFor="email">{t("ui.forms.emailLabel")}</Label>
                 <Input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder={t("emailPlaceholder")}
+                  placeholder={t("ui.forms.emailPlaceholder")}
                   className={state.errors?.email && "border-red-500"}
                   required
                 />
@@ -68,13 +69,15 @@ export function LoginForm({
               {/* password */}
               <div className="grid gap-3">
                 <div className="flex items-center">
-                  <Label htmlFor="password">{t("passwordLabel")}</Label>
-                  <a
+                  <Label htmlFor="password">
+                    {t("ui.forms.passwordLabel")}
+                  </Label>
+                  <Link
                     href="/forgot-password"
                     className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
                   >
-                    {t("forgotPassword")}
-                  </a>
+                    {t("auth.login.links.forgotPassword")}
+                  </Link>
                 </div>
                 <Input
                   id="password"
@@ -94,7 +97,9 @@ export function LoginForm({
                     checked={checked}
                     onCheckedChange={(val) => setChecked(val === true)}
                   />
-                  <Label htmlFor="remember_me">{t("rememberMe")}</Label>
+                  <Label htmlFor="remember_me">
+                    {t("ui.forms.rememberMe")}
+                  </Label>
                   <input
                     type="hidden"
                     name="remember_me"
@@ -105,7 +110,7 @@ export function LoginForm({
               {/* button */}
               <div className="flex flex-col gap-3">
                 <Button type="submit" className="w-full">
-                  {t("loginButton")}
+                  {t("auth.login.buttons.login")}
                 </Button>
                 {/* <Button variant="outline" className="w-full">
                   {t("loginWithGoogle")}
@@ -113,10 +118,10 @@ export function LoginForm({
               </div>
             </div>
             <div className="mt-4 text-center text-sm">
-              {t("signupText")}{" "}
-              <a href="/register" className="underline underline-offset-4">
-                {t("signupLink")}
-              </a>
+              {t("auth.login.links.signupText")}{" "}
+              <Link href="/register" className="underline underline-offset-4">
+                {t("auth.login.links.signupLink")}
+              </Link>
             </div>
           </form>
         </CardContent>

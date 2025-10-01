@@ -52,7 +52,7 @@ export function AuthProvider({ children, accessToken, tokenKey }: Props) {
           setUser(result.data!);
         } else {
           router.push("/login");
-          toast.warning(t("sessionInvalid"));
+          toast.warning(t("session.invalid"));
         }
       }
     };
@@ -73,7 +73,7 @@ export function AuthProvider({ children, accessToken, tokenKey }: Props) {
         const result = await refreshAccessToken();
         if (result && result.type === "error") {
           router.push("/login");
-          toast.warning(t("sessionRenewFailed"));
+          toast.warning(t("session.renewFailed"));
         } else {
           router.refresh();
         }
@@ -89,11 +89,11 @@ export function AuthProvider({ children, accessToken, tokenKey }: Props) {
           const result = await refreshAccessToken();
           if (result && result.type === "error") {
             router.push("/login");
-            toast.warning(t("sessionExpired"));
+            toast.warning(t("session.expired"));
           }
         } else {
           router.push("/login");
-          toast.warning(t("sessionExpired"));
+          toast.warning(t("session.expired"));
         }
       }, ACCESS_TOKEN_EXPIRES_IN_MS - 20000);
 
