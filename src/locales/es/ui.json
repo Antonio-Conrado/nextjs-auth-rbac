@@ -19,5 +19,18 @@
         "profile": "Perfil",
         "configuration": "Configuración",
         "logout": "Cerrar sesión"
+    },
+    "forms": {
+        "nameLabel": "Nombre",
+        "namePlaceholder": "Introduce tu nombre",
+        "surnameLabel": "Apellido",
+        "surnamePlaceholder": "Introduce tu apellido",
+        "telephoneLabel": "Teléfono",
+        "telephonePlaceholder": "Introduce tu número de teléfono",
+        "emailLabel": "Correo electrónico",
+        "emailPlaceholder": "Introduce tu correo electrónico",
+        "passwordLabel": "Contraseña",
+        "passwordPlaceholder": "Introduce tu contraseña",
+        "rememberMe": "Recuérdame"
     }
 }

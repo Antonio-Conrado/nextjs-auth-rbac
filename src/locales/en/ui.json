@@ -19,5 +19,18 @@
         "profile": "Profile",
         "configuration": "Configuration",
         "logout": "Log out"
+    },
+    "forms": {
+        "nameLabel": "Name",
+        "namePlaceholder": "Provide your name",
+        "surnameLabel": "Surname",
+        "surnamePlaceholder": "Provide your surname",
+        "telephoneLabel": "Phone",
+        "telephonePlaceholder": "Provide your phone number",
+        "emailLabel": "Email",
+        "emailPlaceholder": "Provide your email",
+        "passwordLabel": "Password",
+        "passwordPlaceholder": "Provide your password",
+        "rememberMe": "Remember me"
     }
 }
