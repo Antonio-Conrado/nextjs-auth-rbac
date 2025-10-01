@@ -5,6 +5,9 @@ import { ThemeProvider } from "@/shared/components/theme-provider";
 import { NextIntlClientProvider } from "next-intl";
 import { Toaster } from "sonner";
 import { LOCALE } from "@/lib/const/environments";
+import { AppProvider } from "@/providers/AppProvider";
+import { AuthProvider } from "@/providers/AuthProvider";
+import { getTokens } from "@/lib/const/cookies";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,13 +27,25 @@ export async function generateMetadata() {
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { accessToken, refreshToken, rememberToken } = await getTokens();
+
+  // Determine which token is available for refreshing: refreshToken or rememberToken
+  const tokenKey = refreshToken
+    ? "refreshToken"
+    : rememberToken
+    ? "rememberToken"
+    : null;
+
   return (
-     <html lang={LOCALE} suppressHydrationWarning>
+    <html lang={LOCALE} suppressHydrationWarning>
+      <head>
+        <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -41,9 +56,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          
-              <NextIntlClientProvider>{children}</NextIntlClientProvider>
-           
+          {" "}
+          <NextIntlClientProvider>
+            <AppProvider>
+              <AuthProvider accessToken={accessToken} tokenKey={tokenKey}>
+                {children}
+              </AuthProvider>
+            </AppProvider>
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>
