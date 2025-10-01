@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "@/shared/const/environments";
+import { API_URL } from "@/lib/const/environments";
 
 const api = axios.create({ baseURL: API_URL });
 
