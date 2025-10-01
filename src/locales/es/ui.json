@@ -14,5 +14,10 @@
         "description": "Lo sentimos, esta página no ha sido eliminada o no existe.",
         "back": "Volver atrás",
         "home": "Ir al inicio"
+    },
+    "navigation": {
+        "profile": "Perfil",
+        "configuration": "Configuración",
+        "logout": "Cerrar sesión"
     }
 }

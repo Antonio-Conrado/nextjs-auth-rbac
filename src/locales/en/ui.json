@@ -14,5 +14,10 @@
         "description": "Sorry, this page has either been removed or does not exist.",
         "back": "Go back",
         "home": "Go to home"
+    },
+    "navigation": {
+        "profile": "Profile",
+        "configuration": "Configuration",
+        "logout": "Log out"
     }
 }
