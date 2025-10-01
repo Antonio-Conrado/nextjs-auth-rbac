@@ -44,7 +44,7 @@ export default function NotFound() {
 
           <Button
             variant="outline"
-            onClick={() => (window.location.href = "/")}
+            onClick={() => (window.location.href = "/dashboard")}
             className="gap-2 px-6 py-3"
             size="lg"
           >

@@ -3,7 +3,7 @@ import { getTokens } from "./lib/const/cookies";
 
 const publicRoutes = [
   "/login",
-  "/sign-up",
+  "/register",
   "/forgot-password",
   "/confirm-account",
   "/not-found",
@@ -20,7 +20,7 @@ export default async function middleware(req: NextRequest) {
   }
 
   if (isPublicRoute && accessToken) {
-    return NextResponse.redirect(new URL("/", req.nextUrl));
+    return NextResponse.redirect(new URL("/dashboard", req.nextUrl));
   }
 
   return NextResponse.next();
