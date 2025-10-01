@@ -3,6 +3,7 @@ import {
   apiResponse,
   InitialState,
 } from "@/shared/schemas/api/apiResponse.schema";
+import { AxiosError, isAxiosError } from "axios";
 import { getTranslations } from "next-intl/server";
 
 // Response for actions that work with forms (includes field errors, result, and message)
@@ -26,4 +27,19 @@ export async function apiNetworkError(): Promise<apiResponse<any>> {
     statusCode: 500,
     data: null,
   };
+}
+
+
+export async function apiAxiosError(
+  error: unknown
+): Promise<apiResponse<any>> {
+  if (isAxiosError(error) && error.response) {
+    return {
+      type: error.response.data?.type ?? "error",
+      message: error.response.data?.message ?? "Error de servidor",
+      data: error.response.data?.data ?? null,
+      statusCode: error.response.data?.statusCode ?? 500,
+    };
+  }
+  return await  apiNetworkError()
 }
