@@ -3,10 +3,11 @@ import { refreshTokenAction } from "@/features/auth/actions/login-actions";
 import { getUserProfile } from "@/features/auth/api/auth";
 import { accessToken } from "@/features/auth/schemas/loginSchemas";
 import { ACCESS_TOKEN_EXPIRES_IN_MS } from "@/lib/const/environments";
+import { isPublicRoute } from "@/lib/routes";
 import { apiResponse } from "@/shared/schemas/api/apiResponse.schema";
 import { useAppStore } from "@/store/useStore";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { ReactNode, useCallback, useEffect } from "react";
 import { toast } from "sonner";
 
@@ -21,6 +22,7 @@ let refreshingToken: Promise<apiResponse<accessToken>> | null = null;
 
 export function AuthProvider({ children, accessToken, tokenKey }: Props) {
   const router = useRouter();
+  const path = usePathname();
   const t = useTranslations("auth");
   const setUser = useAppStore((state) => state.setUser);
 
@@ -62,7 +64,7 @@ export function AuthProvider({ children, accessToken, tokenKey }: Props) {
   //Handles access token expiration and refresh.
   useEffect(() => {
     // If no access token and no refresh mechanism, redirect to login
-    if (!accessToken && !tokenKey) {
+    if (!isPublicRoute(path) && !accessToken && !tokenKey) {
       router.push("/login");
       return;
     }
