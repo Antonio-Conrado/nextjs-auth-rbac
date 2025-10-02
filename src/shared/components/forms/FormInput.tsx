@@ -10,7 +10,7 @@ import {
 type Props<T extends FieldValues> = {
   register: UseFormRegister<T>;
   errors: FieldErrors<T>;
-  type?: "text" | "email" | "number" | "date";
+  type?: "text" | "email" | "number" | "date" | "password";
   name: Path<T>;
   placeholder: string;
   label: string;
