@@ -83,6 +83,7 @@ export function LoginForm({
                   id="password"
                   type="password"
                   name="password"
+                  placeholder={t("ui.forms.passwordPlaceholder")}
                   className={state.errors?.password && "border-red-500"}
                   required
                 />
