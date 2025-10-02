@@ -28,7 +28,7 @@ export async function registerAction(
     email: formData.get("email"),
     password: formData.get("password"),
   });
-  console.log(validateFields);
+
   if (!validateFields.success) {
     const errorTree = z.treeifyError(validateFields.error);
     return {
@@ -57,7 +57,6 @@ export async function registerAction(
 
     // Validate form fields
     const result = apiResponseSchema(z.null()).safeParse(await resp.json());
-    console.log(result);
 
     if (!result.success) {
       return await apiSchemaError(result);

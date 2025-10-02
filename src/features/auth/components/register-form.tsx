@@ -23,7 +23,6 @@ import {
   registerFormData,
   registerFormDataSchema,
 } from "../schemas/registerSchema";
-import ErrorMessage from "@/shared/components/feedback/ErrorMessage";
 
 export function RegisterForm({
   className,
@@ -45,6 +44,7 @@ export function RegisterForm({
     resolver: zodResolver(registerFormDataSchema(t)),
   });
   useEffect(() => {
+    // Show toast notifications when the request is completed
     if (state.type === "success") {
       toast.success(state.message);
     } else if (state.type === "error") {
@@ -53,6 +53,7 @@ export function RegisterForm({
   }, [state]);
 
   useEffect(() => {
+    // Handle server-side validation errors (in case client-side validation is bypassed)
     if (state.errors) {
       Object.entries(state.errors).forEach(([field, messages]) => {
         if (messages && messages.length > 0) {
@@ -66,15 +67,12 @@ export function RegisterForm({
   }, [state, setError]);
 
   const onSubmit = (data: registerFormData) => {
-    console.log(data);
+    // Prepare form data to send to the server
     const formData = new FormData();
     Object.entries(data).forEach(([key, value]) => {
       formData.append(key, value as string);
     });
-    for (const [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
-
+    // Use startTransition to keep UI responsive while submitting
     startTransition(() => {
       formAction(formData);
     });
