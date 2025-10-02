@@ -9,5 +9,7 @@
     "surnameRequired": "El apellido es obligatorio",
     "telephoneInvalid": "El número debe incluir el código de país +505 y comenzar con 5, 7 u 8 seguido de 7 dígitos",
     "passwordTooShort": "La contraseña debe tener al menos 6 caracteres",
-    "passwordInvalid": "La contraseña debe contener al menos una mayúscula, una minúscula, un número y un carácter especial"
+    "passwordInvalid": "La contraseña debe contener al menos una mayúscula, una minúscula, un número y un carácter especial",
+    "tokenInvalid": "El token no es válido",
+    "passwordsNotMatch": "Las contraseñas no coinciden"
 }

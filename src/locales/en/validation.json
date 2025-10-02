@@ -9,5 +9,7 @@
     "surnameRequired": "Surname is required",
     "telephoneInvalid": "The number must include the country code +505 and start with 5, 7, or 8 followed by 7 digits",
     "passwordTooShort": "The password must be at least 6 characters long",
-    "passwordInvalid": "The password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
+    "passwordInvalid": "The password must contain at least one uppercase letter, one lowercase letter, one number, and one special character",
+    "tokenInvalid": "The token is not valid",
+    "passwordsNotMatch": "Passwords do not match"
 }

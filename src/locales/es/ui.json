@@ -31,6 +31,12 @@
         "emailPlaceholder": "Introduce tu correo electrónico",
         "passwordLabel": "Contraseña",
         "passwordPlaceholder": "Introduce tu contraseña",
-        "rememberMe": "Recuérdame"
+        "rememberMe": "Recuérdame",
+        "tokenLabel": "Token",
+        "tokenPlaceholder": "Introduce el token que recibiste",
+        "newPasswordLabel": "Nueva contraseña",
+        "newPasswordPlaceholder": "Ingresa tu nueva contraseña",
+        "passwordConfirmLabel": "Confirmar contraseña",
+        "passwordConfirmPlaceholder": "Confirma tu nueva contraseña"
     }
 }
