@@ -21,6 +21,7 @@ import {
   resetPasswordSchema,
 } from "../schemas/resetPasswordSchema";
 import { resetPasswordAction } from "../actions/resetPassword-action";
+import { useRouter } from "next/navigation";
 
 type Props = {
   email: string;
@@ -28,6 +29,7 @@ type Props = {
 };
 
 export function ResetPasswordForm({ email, resetPasswordToken }: Props) {
+  const router = useRouter();
   const t = useTranslations();
   const [state, formAction] = useActionState(
     resetPasswordAction,
@@ -52,10 +54,11 @@ export function ResetPasswordForm({ email, resetPasswordToken }: Props) {
     // Show toast notifications when the request is completed
     if (state.type === "success") {
       toast.success(state.message);
+      router.push("/login");
     } else if (state.type === "error") {
       toast.error(state.message);
     }
-  }, [state]);
+  }, [state, router]);
 
   useEffect(() => {
     // Handle server-side validation errors (in case client-side validation is bypassed)
