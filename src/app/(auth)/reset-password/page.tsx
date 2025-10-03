@@ -1,10 +1,14 @@
 "use client";
+import * as z from "zod";
 import { ValidateResetTokenPassword } from "@/features/auth/components/ValidateResetTokenPassword";
 import { useSearchParams, useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { useEffect, useState } from "react";
 import { ResetPasswordForm } from "@/features/auth/components/ResetPasswordForm";
 import { useTranslations } from "next-intl";
+
+export const emailSchema = (t: (key: string) => string) =>
+  z.email({ error: t("validation.emailInvalid") });
 
 export default function Page() {
   const searchParams = useSearchParams();
@@ -15,7 +19,8 @@ export default function Page() {
   const [resetPasswordToken, setResetPasswordToken] = useState<string>("");
 
   useEffect(() => {
-    if (!email) {
+    const result = emailSchema(t).safeParse(email);
+    if (!result.success) {
       toast.error(t("auth.resetPassword.emailNotProvided"));
       router.push("/login");
     }
