@@ -37,6 +37,33 @@
         "newPasswordLabel": "Nueva contraseña",
         "newPasswordPlaceholder": "Ingresa tu nueva contraseña",
         "passwordConfirmLabel": "Confirmar contraseña",
-        "passwordConfirmPlaceholder": "Confirma tu nueva contraseña"
+        "passwordConfirmPlaceholder": "Confirma tu nueva contraseña",
+        "roleLabel": "Rol",
+        "rolePlaceholder": "Selecciona un rol",
+        "permissionLabel": "Permiso",
+        "permissionPlaceholder": "Selecciona un permiso"
+    },
+    "settings": {
+        "changePassword": {
+            "tabsTitle": "Contraseña",
+            "title": "Cambia tu contraseña",
+            "description": "Actualiza tu contraseña de forma segura. Después de guardarla deberás iniciar sesión nuevamente.",
+            "buttons": "Guardar contraseña"
+        },
+        "profile": {
+            "tabsTitle": "Perfil",
+            "title": "Tu perfil",
+            "description": "Administra tu información personal y mantén tus datos actualizados.",
+            "buttons": "Actualizar perfil"
+        },
+        "profilePhoto": {
+            "tabsTitle": "Foto",
+            "title": "Actualizar foto de perfil",
+            "description": "Sube o cambia tu foto de perfil para personalizar tu cuenta.",
+            "buttons": {
+                "upload": "Subir foto",
+                "remove": "Eliminar foto"
+            }
+        }
     }
 }

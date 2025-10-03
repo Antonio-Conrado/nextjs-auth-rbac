@@ -11,5 +11,7 @@
     "passwordTooShort": "The password must be at least 6 characters long",
     "passwordInvalid": "The password must contain at least one uppercase letter, one lowercase letter, one number, and one special character",
     "tokenInvalid": "The token is not valid",
-    "passwordsNotMatch": "Passwords do not match"
+    "passwordsNotMatch": "Passwords do not match",
+    "roleRequired": "Role is required",
+    "permissionRequired": "At least one permission must be selected"
 }

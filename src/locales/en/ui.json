@@ -37,6 +37,33 @@
         "newPasswordLabel": "New Password",
         "newPasswordPlaceholder": "Enter your new password",
         "passwordConfirmLabel": "Confirm Password",
-        "passwordConfirmPlaceholder": "Confirm your new password"
+        "passwordConfirmPlaceholder": "Confirm your new password",
+        "roleLabel": "Role",
+        "rolePlaceholder": "Select a role",
+        "permissionLabel": "Permission",
+        "permissionPlaceholder": "Select a permission"
+    },
+    "settings": {
+        "changePassword": {
+            "tabsTitle": "Password",
+            "title": "Change Your Password",
+            "description": "Securely update your password. After saving, you will need to log in again.",
+            "buttons": "Save Password"
+        },
+        "profile": {
+            "tabsTitle": "Profile",
+            "title": "Your Profile",
+            "description": "Manage your personal information and keep your data up to date.",
+            "buttons": "Update Profile"
+        },
+        "profilePhoto": {
+            "tabsTitle": "Photo",
+            "title": "Update Profile Photo",
+            "description": "Upload or change your profile photo to personalize your account.",
+            "buttons": {
+                "upload": "Upload Photo",
+                "remove": "Remove Photo"
+            }
+        }
     }
 }

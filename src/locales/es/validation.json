@@ -11,5 +11,7 @@
     "passwordTooShort": "La contraseña debe tener al menos 6 caracteres",
     "passwordInvalid": "La contraseña debe contener al menos una mayúscula, una minúscula, un número y un carácter especial",
     "tokenInvalid": "El token no es válido",
-    "passwordsNotMatch": "Las contraseñas no coinciden"
+    "passwordsNotMatch": "Las contraseñas no coinciden",
+    "roleRequired": "El rol es obligatorio",
+    "permissionRequired": "Debe seleccionar al menos un permiso"
 }
