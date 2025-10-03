@@ -1,8 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { ChartColumn } from "lucide-react";
-
 import {
   Sidebar,
   SidebarContent,
@@ -14,19 +12,6 @@ import { SidebarBrand } from "./SidebarBrand";
 import { NavMain } from "./nav-main";
 import { NavUser } from "./nav-user";
 
-// This is sample data.
-const data = {
-  navMain: [
-    {
-      title: "Dashboard",
-      url: "/dashboard",
-      icon: ChartColumn,
-      isActive: true,
-      items: [],
-    },
-  ],
-};
-
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
@@ -34,7 +19,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarBrand />
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
+        <NavMain />
       </SidebarContent>
       <SidebarFooter>
         <NavUser />

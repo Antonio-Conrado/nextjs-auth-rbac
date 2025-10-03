@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronsUpDown, LogOut, Sparkles, User } from "lucide-react";
+import { ChevronsUpDown, LogOut, User } from "lucide-react";
 
 import {
   Avatar,
@@ -100,13 +100,7 @@ export function NavUser() {
             <DropdownMenuGroup>
               <DropdownMenuItem>
                 <User />
-                <Link href={"/profile"}>{t("navigation.profile")}</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Sparkles />
-                <Link href={"/configuration"}>
-                  {t("navigation.configuration")}
-                </Link>
+                <Link href={"/settings"}>{t("navigation.configuration")}</Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
