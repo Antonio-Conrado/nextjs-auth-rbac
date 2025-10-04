@@ -15,6 +15,8 @@ export const roleSchema = z.object({
 
 export const userProfileSchema = z.object({
   id: z.number(),
+  name: z.string(),
+  surname: z.string(),
   fullName: z.string(),
   email: z.string(),
   telephone: z.string(),
