@@ -6,6 +6,7 @@ import {
   SidebarTrigger,
 } from "@/shared/components/ui/sidebar";
 import "../globals.css";
+import { ModeToggle } from "@/shared/components/ui/mode-toggle";
 
 export default async function ProtectedLayout({
   children,
@@ -24,6 +25,9 @@ export default async function ProtectedLayout({
                 orientation="vertical"
                 className="mr-2 data-[orientation=vertical]:h-4"
               />
+            </div>
+            <div className="ml-auto px-4">
+              <ModeToggle />
             </div>
           </header>
           <div className="flex flex-1 flex-col gap-4 p-4 pt-0">{children}</div>
