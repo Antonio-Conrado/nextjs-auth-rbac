@@ -64,6 +64,10 @@
                 "upload": "Subir foto",
                 "remove": "Eliminar foto"
             }
+        },
+        "theme": {
+            "tabsTitle": "Tema del sistema",
+            "title": "Cambiar el tema del sistema (Oscuro / Claro)"
         }
     }
 }

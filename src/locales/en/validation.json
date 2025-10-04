@@ -13,5 +13,6 @@
     "tokenInvalid": "The token is not valid",
     "passwordsNotMatch": "Passwords do not match",
     "roleRequired": "Role is required",
-    "permissionRequired": "At least one permission must be selected"
+    "permissionRequired": "At least one permission must be selected",
+    "missingValue": "The {item} value was not provided or is invalid"
 }

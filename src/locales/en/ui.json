@@ -64,6 +64,10 @@
                 "upload": "Upload Photo",
                 "remove": "Remove Photo"
             }
+        },
+        "theme": {
+            "tabsTitle": "System Theme",
+            "title": "Change the system theme (Dark / Light)"
         }
     }
 }

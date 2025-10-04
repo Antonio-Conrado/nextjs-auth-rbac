@@ -13,5 +13,6 @@
     "tokenInvalid": "El token no es válido",
     "passwordsNotMatch": "Las contraseñas no coinciden",
     "roleRequired": "El rol es obligatorio",
-    "permissionRequired": "Debe seleccionar al menos un permiso"
+    "permissionRequired": "Debe seleccionar al menos un permiso",
+    "missingValue": "El valor {item} no ha sido proporcionado o no es válido"
 }
