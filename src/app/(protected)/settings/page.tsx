@@ -1,4 +1,5 @@
 import ChangePassword from "@/features/settings/components/ChangePassword";
+import Profile from "@/features/settings/components/Profile";
 import { Tabs, TabsList, TabsTrigger } from "@/shared/components/ui/tabs";
 import { getTranslations } from "next-intl/server";
 
@@ -16,6 +17,7 @@ export default async function Page() {
             {t("ui.settings.changePassword.tabsTitle")}
           </TabsTrigger>
         </TabsList>
+        <Profile />
         <ChangePassword />
       </Tabs>
     </div>
