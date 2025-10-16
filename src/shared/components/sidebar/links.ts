@@ -1,4 +1,4 @@
-import { ChartColumn, LucideIcon } from "lucide-react";
+import { ChartColumn, Lock, LucideIcon } from "lucide-react";
 
 export type NavLinks = {
   title: string;
@@ -18,5 +18,12 @@ export const navLinks: NavLinks[] = [
     icon: ChartColumn,
     isActive: true,
     subLinks: [],
+  },
+  {
+    title: "Security",
+    url: "",
+    icon: Lock,
+    isActive: true,
+    subLinks: [{ title: "users", url: "/security/users" }],
   },
 ];
