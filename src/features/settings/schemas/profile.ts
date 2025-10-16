@@ -11,7 +11,7 @@ export const profileSchema = (t: (key: string) => string) => {
         message: t("validation.telephoneInvalid"),
       })
       .optional(),
-    roleId: z.number({ error: t("validation.roleRequired") }),
+    roleId: z.number({ error: t("validation.roleRequired") }).optional(),
   });
 };
 export type profile = z.infer<ReturnType<typeof profileSchema>>;

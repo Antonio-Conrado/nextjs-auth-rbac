@@ -4,7 +4,7 @@ import {
   apiResponseSchema,
   InitialState,
 } from "@/shared/schemas/api/apiResponse.schema";
-import { profileErrors, profileSchema } from "../schemas/profile";
+import { profile, profileErrors, profileSchema } from "../schemas/profile";
 import { getTranslations } from "next-intl/server";
 import z from "zod";
 import { apiAxiosError } from "@/shared/utils/networkError";
@@ -51,17 +51,24 @@ export async function profileAction(
   }
 
   try {
-    const { name, surname, email, telephone } = validateFields.data;
-    const { data } = await api.patch(`${API_URL}/users/${userId}`, {
+    const { name, surname, email, telephone, roleId } = validateFields.data;
+
+    const body: profile = {
       name,
       surname,
       telephone,
       email,
-    });
+    };
+    // Only update roleId if it exists and is not 1, since 1 corresponds to the superadmin role
+    if (roleId && roleId !== 1) {
+      body.roleId = roleId;
+    }
+
+    const { data } = await api.patch(`${API_URL}/users/${userId}`, body);
 
     const result = apiResponseSchema(z.null()).safeParse(data);
     if (!result.success) {
-      return await apiSchemaError(result);
+      return apiSchemaError();
     }
     return {
       message: result.data.message,

@@ -79,7 +79,10 @@ export default function Profile() {
   const onSubmit = (data: profile) => {
     const formData = new FormData();
     Object.entries(data).forEach(([key, value]) => {
-      formData.append(key, value as string);
+      if (key !== "roleId") {
+        // Skip roleId because it can only be edited in the Security module
+        formData.append(key, value as string);
+      }
     });
 
     startTransition(() => {
