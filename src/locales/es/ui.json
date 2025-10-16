@@ -9,6 +9,22 @@
     "loading": "Cargando...",
     "back": "Atrás",
     "next": "Siguiente",
+    "actions": "Acciones",
+    "viewDetails": "Ver detalles",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "create": "Crear",
+    "update": "Actualizar",
+    "save": "Guardar",
+    "confirm": "Confirmar",
+    "activate": "Activar",
+    "deactivate": "Desactivar",
+    "suspend": "Suspender",
+    "restore": "Restaurar",
+    "download": "Descargar",
+    "print": "Imprimir",
+    "duplicate": "Duplicar",
+    "archive": "Archivar",
     "notFound": {
         "title": "¡Ups! Página no encontrada",
         "description": "Lo sentimos, esta página no ha sido eliminada o no existe.",
@@ -69,5 +85,37 @@
             "tabsTitle": "Tema del sistema",
             "title": "Cambiar el tema del sistema (Oscuro / Claro)"
         }
+    },
+    "tables": {
+        "of": "de",
+        "rows": "fila(s)",
+        "previous": "anterior",
+        "next": "siguiente"
+    },
+    "noData": "No se pudieron cargar los datos. Por favor, inténtalo de nuevo más tarde.",
+    "noResults": "No se encontraron resultados",
+    "users": {
+        "usersList": {
+            "table": {
+                "id": "ID",
+                "email": "Correo electrónico",
+                "fullName": "Nombre completo",
+                "profilePhotoUrl": "Foto",
+                "role": "Rol",
+                "telephone": "Teléfono",
+                "status": "Estado"
+            }
+        }
+    },
+    "status": {
+        "active": "Activo",
+        "inactive": "Inactivo",
+        "available": "Disponible",
+        "unavailable": "No disponible",
+        "suspended": "Suspendido",
+        "cancelled": "Cancelado",
+        "completed": "Completado",
+        "inProgress": "En proceso",
+        "pending": "Pendiente"
     }
 }

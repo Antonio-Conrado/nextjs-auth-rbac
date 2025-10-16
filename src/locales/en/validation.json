@@ -14,5 +14,13 @@
     "passwordsNotMatch": "Passwords do not match",
     "roleRequired": "Role is required",
     "permissionRequired": "At least one permission must be selected",
-    "missingValue": "The {item} value was not provided or is invalid"
+    "missingValue": "The {item} value was not provided or is invalid",
+    "pagination": {
+        "pageMin": "Page must be at least 1",
+        "limitMin": "Limit must be at least 1",
+        "totalMin": "Total must be at least 0",
+        "totalPagesMin": "Total pages must be at least 0",
+        "hasNextPageRequired": "hasNextPage field is required",
+        "hasPreviousPageRequired": "hasPreviousPage field is required"
+    }
 }

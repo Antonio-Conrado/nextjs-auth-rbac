@@ -14,5 +14,13 @@
     "passwordsNotMatch": "Las contraseñas no coinciden",
     "roleRequired": "El rol es obligatorio",
     "permissionRequired": "Debe seleccionar al menos un permiso",
-    "missingValue": "El valor {item} no ha sido proporcionado o no es válido"
+    "missingValue": "El valor {item} no ha sido proporcionado o no es válido",
+    "pagination": {
+        "pageMin": "La página debe ser al menos 1",
+        "limitMin": "El límite debe ser al menos 1",
+        "totalMin": "El total debe ser al menos 0",
+        "totalPagesMin": "El total de páginas debe ser al menos 0",
+        "hasNextPageRequired": "El campo hasNextPage es obligatorio",
+        "hasPreviousPageRequired": "El campo hasPreviousPage es obligatorio"
+    }
 }

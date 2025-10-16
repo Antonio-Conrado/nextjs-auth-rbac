@@ -9,6 +9,22 @@
     "loading": "Loading...",
     "back": "Back",
     "next": "Next",
+    "actions": "Actions",
+    "viewDetails": "View details",
+    "edit": "Edit",
+    "delete": "Delete",
+    "create": "Create",
+    "update": "Update",
+    "save": "Save",
+    "confirm": "Confirm",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "suspend": "Suspend",
+    "restore": "Restore",
+    "download": "Download",
+    "print": "Print",
+    "duplicate": "Duplicate",
+    "archive": "Archive",
     "notFound": {
         "title": "Oops! Page not found",
         "description": "Sorry, this page has either been removed or does not exist.",
@@ -69,5 +85,37 @@
             "tabsTitle": "System Theme",
             "title": "Change the system theme (Dark / Light)"
         }
+    },
+    "tables": {
+        "of": "of",
+        "rows": "row(s)",
+        "previous": "previous",
+        "next": "next"
+    },
+    "noData": "Failed to load the data. Please try again later.",
+    "noResults": "No results found",
+    "users": {
+        "usersList": {
+            "table": {
+                "id": "ID",
+                "email": "Email",
+                "fullName": "Full Name",
+                "profilePhotoUrl": "Photo",
+                "role": "Role",
+                "telephone": "Telephone",
+                "status": "Status"
+            }
+        }
+    },
+    "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "available": "Available",
+        "unavailable": "Unavailable",
+        "suspended": "Suspended",
+        "cancelled": "Cancelled",
+        "completed": "Completed",
+        "inProgress": "In progress",
+        "pending": "Pending"
     }
 }
