@@ -10,7 +10,9 @@ import { apiSchemaError } from "@/shared/utils/apiSchemaError";
 import api from "@/lib/config/axios";
 import axios from "axios";
 
-export async function getUserProfile(): Promise<apiResponse<UserProfile>> {
+export async function getUserProfile(): Promise<
+  apiResponse<UserProfile | null>
+> {
   try {
     const { data } = await api(`${API_URL}/auth/profile`);
     const result = apiResponseSchema(userProfileSchema).safeParse(data);
@@ -36,7 +38,6 @@ export async function logout(): Promise<apiResponse<null>> {
     const { data } = await axios.post("api/auth/logout");
     const result = apiResponseSchema(z.null()).safeParse(data);
 
-    console.log(result);
     if (!result.success) {
       return await apiSchemaError(result);
     }

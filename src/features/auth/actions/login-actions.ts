@@ -119,7 +119,7 @@ export async function loginAction(
 
 export async function refreshTokenAction(
   key: keyToken
-): Promise<apiResponse<accessToken>> {
+): Promise<apiResponse<accessToken | null>> {
   const cookieStore = await cookies();
   const { refreshToken, rememberToken } = await getTokens();
 

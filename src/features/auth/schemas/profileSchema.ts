@@ -3,6 +3,7 @@ import * as z from "zod";
 export const permissionSchema = z.object({
   id: z.number(),
   name: z.string(),
+  description: z.string(),
   status: z.boolean(),
 });
 
