@@ -102,6 +102,7 @@
     "noResults": "No se encontraron resultados",
     "users": {
         "usersList": {
+            "title": "Usuarios",
             "table": {
                 "id": "ID",
                 "email": "Correo electrónico",
