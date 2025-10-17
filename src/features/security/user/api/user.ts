@@ -18,12 +18,18 @@ type fethUsersProps = {
   page: number;
   limit: number;
   t: (key: string) => string;
+  term?: string; // Optional: only used when calling the searchUsers method
 };
 
-export const fetchUsers = async ({ page, limit, t }: fethUsersProps) => {
+export const fetchUsers = async ({ page, limit, t, term }: fethUsersProps) => {
   try {
     const skip = (page - 1) * limit;
-    const { data } = await api(`${API_URL}/users?skip=${skip}&take=${limit}`);
+
+    const url = term
+      ? `${API_URL}/users/search?term=${term}&skip=${skip}&take=${limit}`
+      : `${API_URL}/users?skip=${skip}&take=${limit}`;
+
+    const { data } = await api(url);
 
     // Validate the backend response schema
     const userPaginationResponseSchema = apiResponseSchema(
