@@ -15,6 +15,10 @@
     "roleRequired": "Role is required",
     "permissionRequired": "At least one permission must be selected",
     "missingValue": "The {item} value was not provided or is invalid",
+    "statusRequired": "Status is required",
+    "idRequired": "ID is required",
+    "imageRequired": "Image is required",
+    "fileRequired": "File is required",
     "pagination": {
         "pageMin": "Page must be at least 1",
         "limitMin": "Limit must be at least 1",

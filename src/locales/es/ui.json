@@ -25,6 +25,12 @@
     "print": "Imprimir",
     "duplicate": "Duplicar",
     "archive": "Archivar",
+    "updateImage": "Actualizar imagen",
+    "uploadImage": "Subir imagen",
+    "deleteImage": "Eliminar imagen",
+    "updateFile": "Actualizar archivo",
+    "uploadFile": "Subir archivo",
+    "deleteFile": "Eliminar archivo",
     "notFound": {
         "title": "¡Ups! Página no encontrada",
         "description": "Lo sentimos, esta página no ha sido eliminada o no existe.",
@@ -106,6 +112,9 @@
                 "status": "Estado"
             }
         }
+    },
+    "permissions": {
+        "title": "Permisos"
     },
     "status": {
         "active": "Activo",

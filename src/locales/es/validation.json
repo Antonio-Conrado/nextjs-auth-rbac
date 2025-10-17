@@ -15,6 +15,10 @@
     "roleRequired": "El rol es obligatorio",
     "permissionRequired": "Debe seleccionar al menos un permiso",
     "missingValue": "El valor {item} no ha sido proporcionado o no es válido",
+    "statusRequired": "El estado es obligatorio",
+    "idRequired": "El id es obligatorio",
+    "imageRequired": "La imagen es obligatoria",
+    "fileRequired": "El archivo es obligatorio",
     "pagination": {
         "pageMin": "La página debe ser al menos 1",
         "limitMin": "El límite debe ser al menos 1",

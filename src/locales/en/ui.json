@@ -25,6 +25,12 @@
     "print": "Print",
     "duplicate": "Duplicate",
     "archive": "Archive",
+    "updateImage": "Update image",
+    "uploadImage": "Upload image",
+    "deleteImage": "Delete image",
+    "updateFile": "Update file",
+    "uploadFile": "Upload file",
+    "deleteFile": "Delete file",
     "notFound": {
         "title": "Oops! Page not found",
         "description": "Sorry, this page has either been removed or does not exist.",
@@ -106,6 +112,9 @@
                 "status": "Status"
             }
         }
+    },
+    "permissions": {
+        "title": "Permissions"
     },
     "status": {
         "active": "Active",
