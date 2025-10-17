@@ -111,6 +111,9 @@
                 "telephone": "Telephone",
                 "status": "Status"
             }
+        },
+        "search": {
+            "placeholder": "Search by name or email"
         }
     },
     "permissions": {

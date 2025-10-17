@@ -111,6 +111,9 @@
                 "telephone": "Teléfono",
                 "status": "Estado"
             }
+        },
+        "search": {
+            "placeholder": "Buscar por nombre o correo electrónico"
         }
     },
     "permissions": {
