@@ -52,7 +52,7 @@ export default function UserForm({
     queryFn: fetchRoles,
   });
 
-  if (isLoading || roles.isLoading) return <SpinnerButton />;
+  if (isLoading) return <SpinnerButton />;
   if (error) {
     toast.error(error.message);
     return null;
