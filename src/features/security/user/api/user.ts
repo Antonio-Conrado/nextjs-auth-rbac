@@ -6,9 +6,12 @@ import {
   apiResponseSchema,
 } from "@/shared/schemas/api/apiResponse.schema";
 import { apiSchemaError } from "@/shared/utils/apiSchemaError";
-import { paginationDataSchema } from "@/shared/schemas/pagination";
+import {
+  paginationData,
+  paginationDataSchema,
+} from "@/shared/schemas/pagination";
 import z from "zod";
-import { usersListProfileSchema } from "../schema/user";
+import { usersListProfile, usersListProfileSchema } from "../schema/user";
 import {
   UserProfile,
   userProfileSchema,
@@ -21,7 +24,14 @@ type fethUsersProps = {
   term?: string; // Optional: only used when calling the searchUsers method
 };
 
-export const fetchUsers = async ({ page, limit, t, term }: fethUsersProps) => {
+export const fetchUsers = async ({
+  page,
+  limit,
+  t,
+  term,
+}: fethUsersProps): Promise<
+  apiResponse<paginationData<usersListProfile> | null>
+> => {
   try {
     const skip = (page - 1) * limit;
 
