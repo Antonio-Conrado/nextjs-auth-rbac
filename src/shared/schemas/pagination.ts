@@ -28,3 +28,8 @@ export const paginationDataSchema = <T extends z.ZodTypeAny>(itemSchema: T) =>
     items: z.array(itemSchema),
     meta: metaSchema,
   });
+
+export type paginationData<T> = {
+  items: T[];
+  meta: z.infer<typeof metaSchema>;
+};
