@@ -4,6 +4,8 @@
         "title": "Next.js Auth RBAC",
         "description": "A Next.js application that implements authentication and role-based access control (RBAC), allowing secure management of users and permissions according to different roles."
     },
+    "yes": "sí",
+    "no": "no",
     "submit": "Enviar",
     "cancel": "Cancelar",
     "loading": "Cargando...",
@@ -112,6 +114,13 @@
                 "telephone": "Teléfono",
                 "status": "Estado"
             }
+        },
+        "user": {
+            "titleAccountInformation": "Información de la cuenta",
+            "titlePermissionsAndAccessControl": "Permisos y control de acceso",
+            "contactData": "Datos de contacto",
+            "verifiedAccount": "Cuenta verificada",
+            "creationDate": "Fecha de creación"
         },
         "search": {
             "placeholder": "Buscar por nombre o correo electrónico"
