@@ -45,7 +45,10 @@ export default async function page({ params }: Props) {
                 createdAt={user.data.createdAt}
                 t={t}
               />
-              <UserPermissions />
+              <UserPermissions
+                permissions={permissions.data}
+                userPermissions={user.data.role.permissions}
+              />
             </div>
           </Tabs>
         </div>
