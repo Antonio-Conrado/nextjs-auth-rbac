@@ -17,11 +17,11 @@ export default function UserPermissions({
   const t = useTranslations();
   return (
     <>
-      <div className="flex gap-2 mb-5">
-        <Lock />
-        <h3> {t("ui.users.user.titlePermissionsAndAccessControl")}</h3>
-      </div>
       <TabsContent value="userPermissions" className="flex-1 pt-4">
+        <div className="flex gap-2 mb-5">
+          <Lock />
+          <h3> {t("ui.users.user.titlePermissionsAndAccessControl")}</h3>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {permissions.map((permission) => {
             // Checks if the user has this permission
