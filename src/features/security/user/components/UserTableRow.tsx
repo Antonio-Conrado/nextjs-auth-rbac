@@ -39,10 +39,10 @@ export function UserTableRow({ user, handleViewUser }: Props) {
         />
       </TableCell>
       <TableCell>{user.roleName}</TableCell>
+      <TableCell>{user.telephone}</TableCell>
       <TableCell>
         {user.status ? t("ui.status.active") : t("ui.status.inactive")}
       </TableCell>
-      <TableCell>{user.telephone}</TableCell>
       <TableCell>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
