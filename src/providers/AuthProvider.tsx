@@ -18,7 +18,7 @@ type Props = {
 };
 
 // Global lock to prevent multiple concurrent refresh requests
-let refreshingToken: Promise<apiResponse<accessToken>> | null = null;
+let refreshingToken: Promise<apiResponse<accessToken | null>> | null = null;
 
 export function AuthProvider({ children, accessToken, tokenKey }: Props) {
   const router = useRouter();
@@ -32,7 +32,7 @@ export function AuthProvider({ children, accessToken, tokenKey }: Props) {
    * All other requests that need a valid token will wait for this promise to resolve.
    */
   const refreshAccessToken =
-    useCallback(async (): Promise<apiResponse<accessToken> | null> => {
+    useCallback(async (): Promise<apiResponse<accessToken | null> | null> => {
       if (refreshingToken) return refreshingToken; // wait if refresh is already running
       if (!tokenKey) return null; // no refresh token available
 
